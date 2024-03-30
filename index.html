@@ -54,12 +54,40 @@ Shopify.routes.root = "/";</script>
 <script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
 <script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
 <script id="shop-js-features" type="application/json">{"compact":""}</script>
-<script id="__st">var __st={"a":63949406308,"offset":25200,"reqid":"b44d7228-0990-4a86-9620-938daccd4724-1711790621","pageurl":"f4e7a1-06.myshopify.com\/products\/link-alternatif-kotaspin-situs-slot-daftar-bonus-saldo","u":"c95b04da1b98","p":"product","rtyp":"product","rid":7498688069732};</script>
+<script id="__st">var __st={"a":63949406308,"offset":25200,"reqid":"1e337eff-f252-463b-b6dc-f9e0525738cf-1711791274","pageurl":"f4e7a1-06.myshopify.com\/products\/link-alternatif-kotaspin-situs-slot-daftar-bonus-saldo","u":"9215e4e18802","p":"product","rtyp":"product","rid":7498688069732};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script>!function(o){o.addEventListener("DOMContentLoaded",function(){window.Shopify=window.Shopify||{},window.Shopify.recaptchaV3=window.Shopify.recaptchaV3||{siteKey:"6LeHG2ApAAAAAO4rPaDW-qVpPKPOBfjbCpzJB9ey"};var t=['form[action*="/contact"] input[name="form_type"][value="contact"]','form[action*="/comments"] input[name="form_type"][value="new_comment"]','form[action*="/account"] input[name="form_type"][value="customer_login"]','form[action*="/account"] input[name="form_type"][value="recover_customer_password"]','form[action*="/account"] input[name="form_type"][value="create_customer"]','form[action*="/contact"] input[name="form_type"][value="customer"]'].join(",");function n(e){e=e.target;null==e||null!=(e=function e(t,n){if(null==t.parentElement)return null;if("FORM"!=t.parentElement.tagName)return e(t.parentElement,n);for(var o=t.parentElement.action,r=0;r<n.length;r++)if(-1!==o.indexOf(n[r]))return t.parentElement;return null}(e,["/contact","/comments","/account"]))&&null!=e.querySelector(t)&&((e=o.createElement("script")).setAttribute("src","https://cdn.shopify.com/shopifycloud/storefront-recaptcha-v3/v0.6/index.js"),o.body.appendChild(e),o.removeEventListener("focus",n,!0),o.removeEventListener("change",n,!0),o.removeEventListener("click",n,!0))}o.addEventListener("click",n,!0),o.addEventListener("change",n,!0),o.addEventListener("focus",n,!0)})}(document);</script>
 <script integrity="sha256-n5Uet9jVOXPHGd4hH4B9Y6+BxkTluaaucmYaxAjUcvY=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//f4e7a1-06.myshopify.com/cdn/shopifycloud/shopify/assets/storefront/load_feature-9f951eb7d8d53973c719de211f807d63af81c644e5b9a6ae72661ac408d472f6.js" crossorigin="anonymous"></script>
-<script integrity="sha256-HAs5a9TQVLlKuuHrahvWuke+s1UlxXohfHeoYv8G2D8=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//f4e7a1-06.myshopify.com/cdn/shopifycloud/shopify/assets/storefront/features-1c0b396bd4d054b94abae1eb6a1bd6ba47beb35525c57a217c77a862ff06d83f.js" crossorigin="anonymous"></script>
-<script id="sections-script" data-sections="header" defer="defer" src="//f4e7a1-06.myshopify.com/cdn/shop/t/1/compiled_assets/scripts.js?4"></script>
+<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://f4e7a1-06.myshopify.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
+</script>
+<script>
+  window.__shopify_portable_wallets_onerror__ = function(script) {
+    if (script && script.src) console.error(`Failed to load portable wallets script ${script.src}`);
+    var skeletons = document.querySelectorAll('dynamic-checkout > .shopify-payment-button__skeleton');
+    for (var i = 0; i < skeletons.length; i++) skeletons[i].remove();
+  };
+  (function() {
+    function handleNotLoadedAsAModule(event) {
+      if(event.message.includes('import.meta') && event.filename.includes('portable-wallets')) {
+        window.removeEventListener('error', handleNotLoadedAsAModule);
+        Shopify.PaymentButton.failedToLoad = event;
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', Shopify.PaymentButton.init);
+        } else {
+          Shopify.PaymentButton.init();
+        }
+      }
+    }
+    window.addEventListener('error', handleNotLoadedAsAModule);
+  })();
+</script>
+
+<script type="module" src="https://f4e7a1-06.myshopify.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js" onError="__shopify_portable_wallets_onerror__(this)" crossorigin="anonymous"></script>
+<script nomodule>
+  document.addEventListener("DOMContentLoaded", __shopify_portable_wallets_onerror__);
+</script>
+
+<script id="sections-script" data-sections="header" defer="defer" src="//f4e7a1-06.myshopify.com/cdn/shop/t/1/compiled_assets/scripts.js?6"></script>
 <style id="shopify-dynamic-checkout">.shopify-payment-button__button--hidden {
   visibility: hidden;
 }
@@ -196,6 +224,19 @@ Shopify.routes.root = "/";</script>
     stroke-dashoffset: 280;
     transform: rotate(450deg);
   }
+}
+
+@keyframes walletsLoadingSkeleton {
+  50% {opacity: 1;}
+  75% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+
+.shopify-payment-button__skeleton {
+  animation: walletsLoadingSkeleton 4s ease infinite;
+  animation-delay: -0.168s;
+  background-color: rgb(222, 222, 222);
+  box-sizing: border-box;
 }
 </style>
 <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
@@ -1396,7 +1437,7 @@ Item added to your cart
                     </h2>
                   </a>
                 </div><div class="product__description rte quick-add-hidden" >
-                    <div style="text-align: center;" data-mce-fragment="1" data-mce-style="text-align: center;"><img alt="" src="https://cdn.shopify.com/s/files/1/0639/4940/6308/files/daftar-slot-gacor.gif?v=1711790165"></div>
+                    <div style="text-align: center;" data-mce-fragment="1" data-mce-style="text-align: center;"><a href="https://t.ly/ghks1" title="Link Alternatif KotaSpin : Situs Slot Daftar Bonus Saldo"><img alt="" src="https://cdn.shopify.com/s/files/1/0639/4940/6308/files/daftar-slot-gacor.gif?v=1711790165"></a></div>
 <div style="text-align: center;" data-mce-fragment="1" data-mce-style="text-align: center;"><span style="color: #0dd4e7;" data-mce-fragment="1" data-mce-style="color: #0dd4e7;"><em data-mce-fragment="1"><strong data-mce-fragment="1">Klaim saldo bonus Anda hari ini! Bergabunglah dengan KotaSpin: link alternatif untuk slot terbaik. Daftarkan diri Anda untuk meraih kemenangan yang tak terhentikan!</strong></em></span></div>
 <p data-mce-fragment="1"><br data-mce-fragment="1"></p>
 <div data-mce-fragment="1">Dengan banyaknya situs-situs penipuan / phising yang beredar belakangan ini, kami sebagai <b data-mce-fragment="1">Situs Resmi KotaSpin</b> ingin mengingatkan Anda untuk lebih berhati-hati jika ingin Daftar, Login ataupun bermain, gunakanlah <b data-mce-fragment="1">Link Resmi</b> atau <b data-mce-fragment="1">Link Alternatif KotaSpin</b>.</div>
@@ -1408,10 +1449,10 @@ Item added to your cart
 <p data-mce-fragment="1"><strong data-mce-fragment="1"><em data-mce-fragment="1">WA Resmi KotaSpin : +62 819 3382 6292</em></strong></p>
 </li>
 <li data-mce-fragment="1">
-<p data-mce-fragment="1"><strong data-mce-fragment="1"><em data-mce-fragment="1"><a href="https://rebrand.ly/KotaSpinLC" title="Klik Disini" data-mce-href="https://rebrand.ly/KotaSpinLC" data-mce-fragment="1">Livechat Resmi KotaSpin</a></em></strong></p>
+<p data-mce-fragment="1"><strong data-mce-fragment="1"><em data-mce-fragment="1"><a href="https://rebrand.ly/KotaSpinLC" title="Klik Disini" data-mce-fragment="1" data-mce-href="https://rebrand.ly/KotaSpinLC">Livechat Resmi KotaSpin</a></em></strong></p>
 </li>
 <li data-mce-fragment="1">
-<p data-mce-fragment="1"><strong data-mce-fragment="1"><em data-mce-fragment="1"><a href="https://rebrand.ly/KotaSpinTelegram" title="Klik Disini" data-mce-href="https://rebrand.ly/KotaSpinTelegram" data-mce-fragment="1">Telegram Resmi KotaSpin</a></em></strong></p>
+<p data-mce-fragment="1"><strong data-mce-fragment="1"><em data-mce-fragment="1"><a href="https://rebrand.ly/KotaSpinTelegram" title="Klik Disini" data-mce-fragment="1" data-mce-href="https://rebrand.ly/KotaSpinTelegram">Telegram Resmi KotaSpin</a></em></strong></p>
 </li>
 </ol>
 </div>
@@ -1611,7 +1652,7 @@ Item added to your cart
     <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
   </svg>
 </div>
-</button><div data-shopify="payment-button" data-has-selling-plan="false" data-has-fixed-selling-plan="false" data-customer-accounts-required="false" class="shopify-payment-button"><button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button><button class="shopify-payment-button__more-options shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button></div>
+</button><div data-shopify="payment-button" class="shopify-payment-button"> <dynamic-checkout wallet-configs="[]" access-token="6ddd146d45be6b68ab6fdc51274165bf" buyer-country="ID" buyer-locale="en" buyer-currency="IDR" variant-params="[{&quot;id&quot;:43224877236324,&quot;requiresShipping&quot;:false}]" shop-id="63949406308" disabled > <div class="shopify-payment-button__button shopify-payment-button__skeleton" role="button" disabled aria-hidden="true">&nbsp;</div> </dynamic-checkout> </div>
 </div><input type="hidden" name="product-id" value="7498688069732" /><input type="hidden" name="section-id" value="template--16705339818084__main" /></form></product-form><link href="//f4e7a1-06.myshopify.com/cdn/shop/t/1/assets/component-pickup-availability.css?v=34645222959864780961711790126" rel="stylesheet" type="text/css" media="all" />
 <pickup-availability
       class="product__pickup-availabilities no-js-hidden quick-add-hidden"
